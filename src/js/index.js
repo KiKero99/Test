@@ -25,7 +25,7 @@ function move() {
 }
 
 function navigate(txt) {
-    if (txt == "yes") {
+    if (txt == "1") {
         window.location = "https://forms.gle/rnrdjnJEBufCGK7j9"
     }
     window.location = "https://forms.gle/eKfqmuNvVRNDMhSEA"
