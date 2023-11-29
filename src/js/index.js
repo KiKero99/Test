@@ -24,24 +24,22 @@ function move() {
     });
 }
 
-function changeInterface(txt) {
-    const area = document.getElementById("button-area");
-    const central = document.getElementById("central-txt");
-    area.innerHTML = "";
-    const h1 = document.createElement("h1");
-    h1.innerText = txt;
-    central.appendChild(h1);
+function navigate(txt) {
+    if (txt == "yes") {
+        window.location = "https://forms.gle/rnrdjnJEBufCGK7j9"
+    }
+    window.location = "https://forms.gle/eKfqmuNvVRNDMhSEA"
 }
 
 function yes_non(id, txt) {
     const elem = document.getElementById(id);
     elem.addEventListener("click", () => {
-        changeInterface(txt);
+        navigate(txt);
     })
 }
 
 window.onload = () => {
     move();
-    yes_non("oui", "Je l'ai toujours su sale GAY!!");
-    yes_non("non", "Ouff, j'ai eu peur.");
+    yes_non("oui", "1");
+    yes_non("non", "0");
 };

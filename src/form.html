@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/form.js" type="module" defer></script>
+
+</head>
+
+<body>
+    <form class="form-main-container" action="POST" enctype="multipart/form-data">
+        <div class="form-primary-content flex-center">
+            <fieldset>
+                <legend>Evaluation</legend>
+
+                <div class="data-container">
+                    <label for="name">Nom (pas obligatoire): </label>
+                    <input type="text" id="name" placeholder="Chien" pattern=".*\S+.*" />
+                </div>
+
+                <div class="data-container">
+                    <label for="description">Quest ce que vous avez aimez des seances de labo: </label>
+                    <input type="text" id="positif" class="big" placeholder="Ches pas" minlength="10" required />
+                </div>
+
+                <div class="data-container">
+                    <label for="description">Quest ce que vous n'avez pas aimez des seances de labo: </label>
+                    <input type="text" id="negatif" class="big" placeholder="Il parle trop le charge." minlength="10"
+                        required />
+                </div>
+
+                <div class="data-container">
+                    <datalist id="options-list">
+                        <option value="Enrique et Ely les GOATS"></option>
+                        <option value="Ca va"></option>
+                        <option value="Harry Potter a l'ecole des ingenieurs"></option>
+                        <option value="Pire charge de l'histoire"></option>
+                    </datalist>
+                    <label for="aime-input">Est ce que vous aimez comment la session s'est deroule en seance de labo:
+                    </label>
+                    <input id="aime-input" type="select" list="options-list" />
+                </div>
+
+            </fieldset>
+        </div>
+
+        <div class="submit-button flex-center">
+            <input type="submit" value="Ajouter le film" id="movie-submit" />
+        </div>
+    </form>
+</body>
+
+</html>
